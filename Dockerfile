@@ -1,6 +1,6 @@
-FROM alpine
+FROM python:alpine
 
-RUN apk add --update --no-cache py3-eyed3
+RUN pip install eyed3 grako
 
 ENTRYPOINT [ "eyeD3" ]
 CMD [ "--version" ]
